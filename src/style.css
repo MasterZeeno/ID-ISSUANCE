@@ -79,8 +79,8 @@ button:focus-visible {
 }
 
 .id-card {
-  width: 85.6mm;
-  height: 54mm;
+  height: 85.6mm;
+  width: 54mm;
   border: 1px solid #00386c; /* Your primary color */
   border-radius: 8px;
   overflow: hidden;
