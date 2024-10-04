@@ -1,13 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + Vue</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Issuance</title>
+</head>
+<body>
+    <!-- ID Card Front -->
+    <div class="id-card">
+        <div class="front">
+            <div class="header">Company Name</div>
+            <div class="photo">
+                <!-- Placeholder for Photo -->
+                <img src="placeholder.jpg" alt="Employee Photo">
+            </div>
+            <div class="details">
+                <div class="name">John Doe</div>
+                <div class="position">Software Developer</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ID Card Back -->
+    <div class="id-card">
+        <div class="back">
+            <div class="info">
+                <div class="id-number">NSBP2-00001</div>
+                <div class="status">Status: Waiting for Print</div>
+                <div class="date-printed">Date Printed: N/A</div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
