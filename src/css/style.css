@@ -1,0 +1,102 @@
+@import url("./fonts.css");
+@import url("./variables.css");
+@import url("./banner.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: safe center;
+  align-items: safe center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+img,
+svg {
+  image-rendering: high-quality;
+  shape-rendering: geometricPrecision;
+  color-rendering: optimizeQuality;
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  max-width: 1280px;
+  margin: auto;
+  text-align: center;
+}
+
+.id-card {
+  position: relative;
+  width: var(--id-width);
+  height: var(--id-height);
+  margin: 1.69rem;
+}
+
+.front {
+  background: linear-gradient(var(--front-deg), var(--bg-gradient));
+}
+
+.back {
+  background: linear-gradient(var(--back-deg), var(--bg-gradient));
+}
+
+.top-part {
+  position: absolute;
+  height: 60%;
+  background: url('/senado.jpg'),
+    rgba(var(--dark-blue-rgb), .69);
+}
+
+.id-card,
+.top-part {
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.id-card,
+.profile-photo {
+  background-color: white;
+  border: 0.105625rem solid rgb(var(--dark-blue-rgb));
+  border-radius: 0.3125rem;
+  overflow: hidden;
+}
+
+.info {
+  position: absolute;
+  top: calc(100% - 69% + .69%);
+  left: 3.2%;
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-photo {
+  width: 7.6875rem;
+  height: 7.6875rem;
+}
+
+.details {
+  margin: 0 .6969rem;
+  color: #fff;
+  mix-blend-mode: plus-lighter;
+}
+
+.id_number {
+  opacity: .8;
+}
+
+.qrcode-container {
+  opacity: .69;
+  width: 4.3125rem;
+  height: 4.3125rem;
+  margin: .3232rem auto;
+}

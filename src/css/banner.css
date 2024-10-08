@@ -1,0 +1,17 @@
+.banner-container {
+  padding: 1.96rem 2.23rem;
+  margin: auto;
+  filter: brightness(2) drop-shadow(0 .169rem .169rem rgba(var(--dark-blue-rgb), .69));
+}
+
+.banner-container svg text {
+  fill: #fff;
+}
+
+.banner-container svg text.title {
+  font-size: 0.8725rem;
+}
+
+.banner-container svg text.subtitle {
+  font-size: 0.3168125rem;
+}

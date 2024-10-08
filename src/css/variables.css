@@ -1,0 +1,21 @@
+:root {
+  font-family: "Tilt Wrap", Arial, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --id-aspect-ratio: 1.585185185185;
+  --id-width: clamp(300px, 77vw, 600px);
+  --id-height: calc(var(--id-width) * var(--id-aspect-ratio));
+  
+  --dark-blue-rgb: 23, 32, 69;
+  --light-blue-rgb: 69, 169, 232;
+  
+  --front-deg: -32deg;
+  --back-deg: 132deg;
+  --bg-gradient: transparent 32%, rgba(var(--light-blue-rgb), .69) 100%;
+}
