@@ -17,5 +17,5 @@
   
   --front-deg: -32deg;
   --back-deg: 132deg;
-  --bg-gradient: transparent 32%, rgba(var(--light-blue-rgb), .69) 100%;
+  --bg-gradient: white 32%, rgba(var(--light-blue-rgb), .69) 100%;
 }

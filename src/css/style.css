@@ -24,7 +24,7 @@ svg {
   shape-rendering: geometricPrecision;
   color-rendering: optimizeQuality;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 #app {
@@ -40,9 +40,9 @@ svg {
   margin: 1.69rem;
 }
 
-.front {
-  background: linear-gradient(var(--front-deg), var(--bg-gradient));
-}
+/*.front {*/
+  /*background: linear-gradient(var(--front-deg), var(--bg-gradient));*/
+/*}*/
 
 .back {
   background: linear-gradient(var(--back-deg), var(--bg-gradient));
@@ -53,10 +53,22 @@ svg {
   height: 60%;
   background: url('/senado.jpg'),
     rgba(var(--dark-blue-rgb), .69);
+  /*border-radius: 0 0 1.32rem 1.32rem;*/
+}
+
+.bot-part {
+  isolation: isolate;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 55%;
+  border-radius: 1.69rem 1.69rem 0 0;
+  background: #fff linear-gradient(var(--front-deg), white 69%, rgba(var(--light-blue-rgb), .23) 100%);
 }
 
 .id-card,
-.top-part {
+.top-part,
+.bot-part {
   background-blend-mode: multiply;
   background-size: cover;
   background-repeat: no-repeat;
@@ -66,37 +78,52 @@ svg {
 .id-card,
 .profile-photo {
   background-color: white;
-  border: 0.105625rem solid rgb(var(--dark-blue-rgb));
+  border: 0.205625rem solid rgb(var(--dark-blue-rgb));
   border-radius: 0.3125rem;
   overflow: hidden;
 }
 
 .info {
   position: absolute;
-  top: calc(100% - 69% + .69%);
-  left: 3.2%;
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  flex-direction: column;
+  top: 31%;
+  color: rgb(var(--dark-blue-rgb));
 }
 
 .profile-photo {
-  width: 7.6875rem;
-  height: 7.6875rem;
+  color: rgb(var(--dark-blue-rgb));
+  width: 9.6rem;
+  height: 9.6rem;
+  margin: 0 auto;
+  border-radius: 50%;
 }
 
 .details {
-  margin: 0 .6969rem;
-  color: #fff;
-  mix-blend-mode: plus-lighter;
+  margin-top: .69rem;
+  line-height: 1;
 }
 
-.id_number {
-  opacity: .8;
+.idnumber {
+  font-size: .69rem;
+  color: rgb(var(--light-blue-rgb));
+}
+
+.name {
+  margin-top: .69rem;
+  font-size: 1.32rem;
+}
+
+.position {
+  opacity: .69;
 }
 
 .qrcode-container {
-  opacity: .69;
-  width: 4.3125rem;
-  height: 4.3125rem;
-  margin: .3232rem auto;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: .96rem auto 0;
+  background-color: transparent;
+  border: 0.105625rem solid rgb(var(--dark-blue-rgb));
+  border-radius: 0.3125rem;
+  opacity: .96;
 }
