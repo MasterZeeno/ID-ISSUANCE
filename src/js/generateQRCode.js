@@ -1,5 +1,5 @@
 import QRCode from 'qrcode'
-import QRCodePlaceholder from '/qrcode.svg?raw'
+import QRCodePlaceholder from '@a/qrcode.svg?raw'
 
 const generateQRCode = (idnumber, name, position) => {
   const personnelData = `${idnumber} - ${name} - ${position}`

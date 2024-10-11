@@ -12,13 +12,12 @@
 
 body {
   display: flex;
-  justify-content: safe center;
-  align-items: safe center;
+  justify-content: center;
+  align-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
-img,
 svg {
   image-rendering: high-quality;
   shape-rendering: geometricPrecision;
@@ -38,6 +37,7 @@ svg {
   width: var(--id-width);
   height: var(--id-height);
   margin: 1.69rem;
+  user-select: none;
 }
 
 /*.front {*/
@@ -92,11 +92,23 @@ svg {
 }
 
 .profile-photo {
-  color: rgb(var(--dark-blue-rgb));
-  width: 9.6rem;
-  height: 9.6rem;
+  width: 9.5625rem;
+  height: 9.5625rem;
+  background:
+    #fff url('/placeholder.svg')
+    center / 169%;
+  font-size: 0;
   margin: 0 auto;
   border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-photo img {
+  position: absolute;
+}
+
+.profile-photo canvas {
+  transition: opacity 0.6s ease-in-out;
 }
 
 .details {
