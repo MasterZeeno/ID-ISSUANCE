@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
+    "postbuild": "cp -f ./masterlist.json ./dist/masterlist.json",
     "preview": "vite preview --open",
     "push": "git add . && git commit -m 'init' && git push"
   },

@@ -18,10 +18,16 @@ body {
   min-height: 100vh;
 }
 
-svg {
+img,
+svg,
+canvas {
   image-rendering: high-quality;
-  shape-rendering: geometricPrecision;
   color-rendering: optimizeQuality;
+  width: 100%;
+}
+
+svg {
+  shape-rendering: geometricPrecision;
   width: 100%;
   height: auto;
 }
@@ -92,8 +98,8 @@ svg {
 }
 
 .profile-photo {
-  width: 9.5625rem;
-  height: 9.5625rem;
+  width: 9.6rem;
+  height: 9.6rem;
   background:
     #fff url('/placeholder.svg')
     center / 169%;
@@ -103,12 +109,13 @@ svg {
   overflow: hidden;
 }
 
-.profile-photo img {
-  position: absolute;
-}
+/*.profile-photo img {*/
+  /*position: absolute;*/
+/*}*/
 
 .profile-photo canvas {
   transition: opacity 0.6s ease-in-out;
+  filter: contrast(1.069) saturation(1.069);
 }
 
 .details {

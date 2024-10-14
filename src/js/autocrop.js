@@ -1,25 +1,9 @@
-function cropFaceFromImage(img, c, x, y, w, h) {
-  const ctx = c.getContext('2d')
-  
-  ctx.clearRect(0, 0, c.width, c.height)
-
-  ctx.drawImage(
-    img,
-    x, y,
-    w, h,
-    0, 0,
-    c.width, c.height
-  )
-
-  c.style.opacity = 1
-}
-
-async function loadModels() {
+export async function loadModels() {
   const mf = '/models'
   await Promise.all([
     faceapi.nets.ssdMobilenetv1.loadFromUri(mf),
-    faceapi.nets.faceLandmark68Net.loadFromUri(mf),
-    faceapi.nets.faceRecognitionNet.loadFromUri(mf)
+    faceapi.nets.faceLandmark68Net.loadFromUri(mf)
+    // faceapi.nets.faceRecognitionNet.loadFromUri(mf)
   ])
 }
 
@@ -44,13 +28,18 @@ async function crop(parent) {
   const rh = Math.min(imgHeight, height * 2)
   const rx = Math.max(0, x - (rw / 4))
   const ry = Math.max(0, y - (rh / 3))
+  
+  const ctx = c.getContext('2d')
 
   requestAnimationFrame(() => {
-    cropFaceFromImage(img, c, rx, ry, rw, rh)
+    // cropFaceFromImage(img, c, rx, ry, rw, rh)
+    ctx.clearRect(0, 0, c.width, c.height)
+    ctx.drawImage(img, rx, ry, rw, rh, 0, 0, c.width, c.height)
+    c.removeAttribute("style")
   })
 }
 
-async function autocrop() {
+export async function autocrop() {
   window.onload = async () => {
     await loadModels()
     document.querySelectorAll('.profile-photo').forEach(async (parent) => {
